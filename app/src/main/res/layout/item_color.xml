@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:id="@+id/colorSwatch"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#D9D9D9"/>
+    <ImageView
+        android:id="@+id/imgColorSelected"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_gravity="center"
+        android:padding="4dp"
+        android:src="@drawable/ic_check"
+        android:visibility="gone"/>
+</FrameLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="6dp"
+    app:cardCornerRadius="14dp"
+    app:cardElevation="3dp"
+    app:cardUseCompatPadding="true">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="190dp">
+            <ImageView
+                android:id="@+id/imgTemplates"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="12dp"
+                android:scaleType="centerInside"
+                />
+            
+            <ImageView
+                android:id="@+id/imgFavourite"
+                android:layout_width="38dp"
+                android:layout_height="38dp"
+                android:layout_gravity="top|end"
+                android:layout_margin="8dp"
+                android:src="@drawable/ic_favorite"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/txtTemplateName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:text="Kurti 01"
+            android:textColor="#111827"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:maxLines="1"
+            />
+
+
+        <TextView
+            android:id="@+id/txtTemplateCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="12dp"
+            android:text="Kurti"
+            android:textColor="#6B7280"
+            android:textSize="13sp"
+            />
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

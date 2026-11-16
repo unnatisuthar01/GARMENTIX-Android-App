@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_icon_box"
+    android:padding="6dp">
+
+    <!-- Part Selector Chips Bar (All 5 parts visible side-by-side) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_marginBottom="6dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PART:"
+            android:textColor="#111827"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="4dp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/chipBody"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="3dp"
+                android:background="@drawable/bg_gold_button"
+                android:gravity="center"
+                android:paddingHorizontal="2dp"
+                android:text="Body"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/chipSleeveLeft"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="3dp"
+                android:background="#E5E7EB"
+                android:gravity="center"
+                android:paddingHorizontal="2dp"
+                android:text="L-Sleeve"
+                android:textColor="#111827"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/chipSleeveRight"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="3dp"
+                android:background="#E5E7EB"
+                android:gravity="center"
+                android:paddingHorizontal="2dp"
+                android:text="R-Sleeve"
+                android:textColor="#111827"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/chipNeckline"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="3dp"
+                android:background="#E5E7EB"
+                android:gravity="center"
+                android:paddingHorizontal="2dp"
+                android:text="Neckline"
+                android:textColor="#111827"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/chipCuffs"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="1"
+                android:background="#E5E7EB"
+                android:gravity="center"
+                android:paddingHorizontal="2dp"
+                android:text="Cuffs"
+                android:textColor="#111827"
+                android:textSize="11sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Color Swatches Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="COLOR:"
+            android:textColor="#111827"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:layout_marginEnd="4dp" />
+
+        <HorizontalScrollView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <View
+                    android:id="@+id/swatchRed"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="#DC2626" />
+
+                <View
+                    android:id="@+id/swatchBlue"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="#2563EB" />
+
+                <View
+                    android:id="@+id/swatchGreen"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="#16A34A" />
+
+                <View
+                    android:id="@+id/swatchGold"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="#D4AF37" />
+
+                <View
+                    android:id="@+id/swatchMaroon"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="#800020" />
+
+                <View
+                    android:id="@+id/swatchBlack"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="#111827" />
+
+                <View
+                    android:id="@+id/swatchWhite"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="#FFFFFF" />
+
+                <View
+                    android:id="@+id/swatchPink"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="#EC4899" />
+
+                <View
+                    android:id="@+id/swatchPurple"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_marginEnd="6dp"
+                    android:background="#9333EA" />
+
+                <View
+                    android:id="@+id/swatchOrange"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="#EA580C" />
+
+            </LinearLayout>
+        </HorizontalScrollView>
+    </LinearLayout>
+
+</LinearLayout>

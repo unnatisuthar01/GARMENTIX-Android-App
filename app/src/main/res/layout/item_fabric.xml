@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="105dp"
+    android:layout_margin="5dp"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="3dp"
+    android:background="#E8E2D8">
+
+    <ImageView
+        android:id="@+id/imgFabric"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scaleType="centerCrop"
+        android:contentDescription="Fabric texture preview" />
+
+    <TextView
+        android:id="@+id/txtFabricName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:maxLines="2"
+        android:padding="4dp"
+        android:textColor="#111827"
+        android:textSize="11sp"
+        android:textStyle="bold" />
+
+</LinearLayout>

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#FAF9F6"
+    android:padding="20dp">
+
+    <!-- Header -->
+    <ImageView
+    android:id="@+id/btnBack"
+    android:layout_width="28dp"
+    android:layout_height="28dp"
+    android:src="@drawable/ic_backarrow"
+    app:tint="#111827"/>
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="42dp"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="EDIT PROFILE"
+        android:textColor="#222222"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- Profile Icon -->
+    <ImageView
+        android:id="@+id/imgEditProfile"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_below="@id/btnBack"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/ic_person"
+        android:contentDescription="Profile"
+        android:padding="15dp"
+        android:background="#F0EDE6" />
+
+    <!-- Name Label -->
+    <TextView
+        android:id="@+id/txtNameLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imgEditProfile"
+        android:layout_marginTop="32dp"
+        android:text="Full Name"
+        android:textColor="#30251F"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <!-- Name Input -->
+    <EditText
+        android:id="@+id/edtName"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_below="@id/txtNameLabel"
+        android:layout_marginTop="8dp"
+        android:hint="Enter your full name"
+        android:background="@drawable/bg_input_field"
+
+        android:inputType="textPersonName"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="#30251F"
+        android:textColorHint="#888888"
+        android:textSize="14sp"
+        android:singleLine="true" />
+
+    <!-- Email Label -->
+    <TextView
+        android:id="@+id/txtEmailLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/edtName"
+        android:layout_marginTop="22dp"
+        android:text="Email Address"
+        android:textColor="#30251F"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <!-- Email Display -->
+    <TextView
+        android:id="@+id/txtEmail"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_below="@id/txtEmailLabel"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_input_field"
+        android:gravity="center_vertical"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:text="Email address"
+        android:textColor="#77716B"
+        android:textSize="14sp"
+        android:singleLine="true"
+        android:ellipsize="end" />
+
+    <!-- Mobile Label -->
+    <TextView
+        android:id="@+id/txtMobileLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtEmail"
+        android:layout_marginTop="22dp"
+        android:text="Mobile Number"
+        android:textColor="#30251F"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <!-- Mobile Input -->
+    <EditText
+        android:id="@+id/edtMobile"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_below="@id/txtMobileLabel"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_input_field"
+        android:hint="Enter 10-digit mobile number"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:paddingStart="15dp"
+        android:paddingEnd="15dp"
+        android:textColor="#30251F"
+        android:textColorHint="#888888"
+        android:textSize="14sp"
+        android:singleLine="true" />
+
+
+
+    <!-- Save Button -->
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:layout_below="@id/edtMobile"
+        android:layout_marginTop="32dp"
+        android:backgroundTint="#D9B332"
+        android:text="SAVE CHANGES"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>

@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF9F6"
+    android:fitsSystemWindows="false"
+    tools:context=".DesignScreenActivity">
+
+    <!-- Top Bar -->
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:paddingHorizontal="16dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:src="@drawable/ic_backarrow"
+            android:contentDescription="Back"
+            android:clickable="true"
+            android:focusable="true"
+            app:tint="#111827" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Design Cloth"
+            android:textColor="#111827"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/btnFav"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="8dp"
+            android:src="@drawable/ic_favorite"
+            android:contentDescription="Add to favorites"
+            android:clickable="true"
+            android:focusable="true"
+            app:tint="#D4AF37" />
+
+    </RelativeLayout>
+
+    <!-- Main Design Area -->
+    <LinearLayout
+        android:id="@+id/designArea"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar"
+        android:layout_above="@id/bottomBar"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <!-- Active Template & Selected Part Separate Header Banner -->
+        <LinearLayout
+            android:id="@+id/bannerSelectedPart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/bg_icon_box"
+            android:paddingHorizontal="12dp"
+            android:paddingVertical="8dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtTemplateTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Template: Kurti 01"
+                android:textColor="#111827"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtSelectedPartInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selected Part: Body"
+                android:textColor="#D4AF37"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <!-- FrameLayout: Main Preview Container -->
+            <FrameLayout
+                android:id="@+id/designPreview"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:background="@drawable/bg_input_field"
+                android:padding="2dp">
+
+                <!-- Kurti 01 Independent Multi-Layer Preview Container -->
+                <FrameLayout
+                    android:id="@+id/layoutKurti01Layers"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <!-- Layer 1: Body -->
+                    <ImageView
+                        android:id="@+id/imgKurtiBody"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Kurti Body Layer" />
+
+                    <!-- Layer 2: Left Sleeve -->
+                    <ImageView
+                        android:id="@+id/imgKurtiSleeveLeft"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Kurti Left Sleeve Layer" />
+
+                    <!-- Layer 3: Right Sleeve -->
+                    <ImageView
+                        android:id="@+id/imgKurtiSleeveRight"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Kurti Right Sleeve Layer" />
+
+                    <!-- Layer 4: Neckline -->
+                    <ImageView
+                        android:id="@+id/imgKurtiNeckline"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Kurti Neckline Layer" />
+
+                    <!-- Layer 5: Cuffs -->
+                    <ImageView
+                        android:id="@+id/imgKurtiCuffs"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Kurti Cuffs Layer" />
+
+                    <!-- Layer 6: Shadows & Outline Overlay -->
+                    <ImageView
+                        android:id="@+id/imgKurtiShadows"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:contentDescription="Kurti Shadows Layer" />
+
+                </FrameLayout>
+
+                <!-- Primary Single-Image Fallback Preview for all other templates -->
+                <ImageView
+                    android:id="@+id/imgClothPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/kurti_01"
+                    android:contentDescription="Garment template preview" />
+
+                <!-- Custom text layer -->
+                <TextView
+                    android:id="@+id/txtDesignText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="4dp"
+                    android:text=""
+                    android:textColor="#D4AF37"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <!-- Custom logo layer -->
+                <ImageView
+                    android:id="@+id/imgDesignLogo"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center"
+                    android:scaleType="fitCenter"
+                    android:contentDescription="Custom logo"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txtCustomizationPreview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:background="#CCFFFFFF"
+                    android:padding="8dp"
+                    android:textColor="#111827"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <!-- Right-side customization menu -->
+            <ScrollView
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/btnTemplates"
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/bg_icon_box"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_template"
+                            android:contentDescription="Templates"
+                            app:tint="#111827" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Template"
+                            android:textColor="#111827"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnFabrics"
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/bg_icon_box"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_fabric"
+                            android:contentDescription="Fabrics"
+                            app:tint="#111827" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Fabric"
+                            android:textColor="#111827"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnColor"
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/bg_icon_box"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginTop="4dp"
+                            android:src="@drawable/ic_color"
+                            android:contentDescription="Colors"
+                            app:tint="#111827" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Color"
+                            android:textColor="#111827"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnCustomize"
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/bg_icon_box"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_customize"
+                            android:contentDescription="Customize"
+                            app:tint="#111827" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Customize"
+                            android:textColor="#111827"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/btnTextLogo"
+                        android:layout_width="match_parent"
+                        android:layout_height="72dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@drawable/bg_icon_box"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_text_logo"
+                            android:contentDescription="Text and Logo"
+                            app:tint="#111827" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="Text/Logo"
+                            android:textColor="#111827"
+                            android:textSize="12sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </ScrollView>
+
+        </LinearLayout>
+
+        <!-- Fragment Container for Quick Part & Color Picker -->
+        <FrameLayout
+            android:id="@+id/fragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp" />
+
+    </LinearLayout>
+
+    <!-- Bottom Bar -->
+    <RelativeLayout
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_alignParentBottom="true"
+        android:paddingHorizontal="16dp">
+
+        <LinearLayout
+            android:id="@+id/undoRedoGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/btnUndo"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_undo"
+                    android:contentDescription="Undo"
+                    app:tint="#111827" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Undo"
+                    android:textColor="#111827"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/btnRedo"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="8dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:src="@drawable/ic_redo"
+                    android:contentDescription="Redo"
+                    app:tint="#111827" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Redo"
+                    android:textColor="#111827"
+                    android:textSize="11sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/btnReset"
+                android:layout_width="48dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="6dp"
+                android:gravity="center"
+                android:text="Reset"
+                android:textColor="#111827"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <android.widget.Button
+            android:id="@+id/btnNext"
+            android:layout_width="140dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/bg_gold_button"
+            android:backgroundTint="@null"
+            android:text="Save Design"
+            android:textAllCaps="false"
+            android:textColor="#111827"
+            android:textStyle="bold"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

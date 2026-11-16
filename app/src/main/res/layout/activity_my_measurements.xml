@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAF9F6"
+    android:padding="20dp">
+
+    <!-- Back Button -->
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/ic_back"
+        android:contentDescription="Back"
+        android:padding="8dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+
+    <!-- Heading -->
+    <TextView
+        android:id="@+id/txtHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="MY MEASUREMENTS"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#2D2926"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@id/btnBack"
+        android:layout_marginTop="5dp" />
+
+    <!-- Subtitle -->
+    <TextView
+        android:id="@+id/txtSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Save your measurements for a perfect fit."
+        android:textSize="14sp"
+        android:textColor="#77716B"
+        android:gravity="center"
+        android:layout_below="@id/btnBack"
+        android:layout_marginTop="15dp" />
+
+    <!-- Shoulder Label -->
+    <TextView
+        android:id="@+id/lblShoulder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shoulder (inches)"
+        android:textSize="14sp"
+        android:textColor="#2D2926"
+        android:layout_below="@id/txtSubtitle"
+        android:layout_marginTop="22dp" />
+
+    <!-- Shoulder Input -->
+    <EditText
+        android:id="@+id/edtShoulder"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter shoulder measurement"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:textSize="14sp"
+        android:padding="12dp"
+        android:background="@drawable/bg_input_field"
+        android:layout_below="@id/lblShoulder"
+        android:layout_marginTop="6dp" />
+
+    <!-- Chest Label -->
+    <TextView
+        android:id="@+id/lblChest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chest / Bust (inches)"
+        android:textSize="14sp"
+        android:textColor="#2D2926"
+        android:layout_below="@id/edtShoulder"
+        android:layout_marginTop="12dp" />
+
+    <!-- Chest Input -->
+    <EditText
+        android:id="@+id/edtChest"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter chest / bust measurement"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:textSize="14sp"
+        android:padding="12dp"
+        android:background="@drawable/bg_input_field"
+        android:layout_below="@id/lblChest"
+        android:layout_marginTop="6dp" />
+
+    <!-- Waist Label -->
+    <TextView
+        android:id="@+id/lblWaist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Waist (inches)"
+        android:textSize="14sp"
+        android:textColor="#2D2926"
+        android:layout_below="@id/edtChest"
+        android:layout_marginTop="12dp" />
+
+    <!-- Waist Input -->
+    <EditText
+        android:id="@+id/edtWaist"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter waist measurement"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:textSize="14sp"
+        android:padding="12dp"
+        android:background="@drawable/bg_input_field"
+        android:layout_below="@id/lblWaist"
+        android:layout_marginTop="6dp" />
+
+    <!-- Hips Label -->
+    <TextView
+        android:id="@+id/lblHips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hips (inches)"
+        android:textSize="14sp"
+        android:textColor="#2D2926"
+        android:layout_below="@id/edtWaist"
+        android:layout_marginTop="12dp" />
+
+    <!-- Hips Input -->
+    <EditText
+        android:id="@+id/edtHips"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter hips measurement"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:textSize="14sp"
+        android:padding="12dp"
+        android:background="@drawable/bg_input_field"
+        android:layout_below="@id/lblHips"
+        android:layout_marginTop="6dp" />
+
+    <!-- Sleeve Length Label -->
+    <TextView
+        android:id="@+id/lblSleeve"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sleeve Length (inches)"
+        android:textSize="14sp"
+        android:textColor="#2D2926"
+        android:layout_below="@id/edtHips"
+        android:layout_marginTop="12dp" />
+
+    <!-- Sleeve Length Input -->
+    <EditText
+        android:id="@+id/edtSleeveLength"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter sleeve length"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:textSize="14sp"
+        android:padding="12dp"
+        android:background="@drawable/bg_input_field"
+        android:layout_below="@id/lblSleeve"
+        android:layout_marginTop="6dp" />
+
+    <!-- Dress Length Label -->
+    <TextView
+        android:id="@+id/lblDressLength"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dress Length (inches)"
+        android:textSize="14sp"
+        android:textColor="#2D2926"
+        android:layout_below="@id/edtSleeveLength"
+        android:layout_marginTop="12dp" />
+
+    <!-- Dress Length Input -->
+    <EditText
+        android:id="@+id/edtDressLength"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Enter dress length"
+        android:inputType="numberDecimal"
+        android:singleLine="true"
+        android:textSize="14sp"
+        android:padding="12dp"
+        android:background="@drawable/bg_input_field"
+        android:layout_below="@id/lblDressLength"
+        android:layout_marginTop="6dp" />
+
+    <!-- Save Measurements Button -->
+    <Button
+        android:id="@+id/btnSaveMeasurements"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:text="SAVE MEASUREMENTS"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#2D2926"
+        android:backgroundTint="#D9B332"
+        android:layout_below="@id/edtDressLength"
+        android:layout_marginTop="20dp" />
+
+</RelativeLayout>

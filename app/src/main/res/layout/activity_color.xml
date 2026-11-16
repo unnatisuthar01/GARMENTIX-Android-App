@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="#FAF9F6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ColorActivity">
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:paddingStart="14dp"
+        android:paddingEnd="14dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:padding="5dp"
+            android:src="@drawable/ic_backarrow"
+            app:tint="#111827"/>
+
+        <TextView
+            android:id="@+id/txtColorTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="Colors"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#111827"/>
+    </RelativeLayout>
+    <ScrollView
+        android:id="@+id/colorScrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topBar"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        android:fillViewport="true"
+        android:scrollbars="none">
+        <LinearLayout
+            android:id="@+id/colorMainLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="20dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Recent color"
+                android:textColor="#111827"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvRecentColors"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:scrollbars="none"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Basic Colors"
+                android:textColor="#111827"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="10dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBasicColors"
+                android:layout_width="match_parent"
+                android:layout_height="145dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:scrollbars="none"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Premiumcolor"
+                android:textColor="#111827"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPremiumColors"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:scrollbars="none"/>
+            <Button
+                android:id="@+id/btnCustomColor"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#D4AF37"
+                android:text="Choose Custom Color"
+                android:textAllCaps="false"
+                android:textColor="#111827" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
